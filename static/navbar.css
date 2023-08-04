@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    transition-duration: 2s;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    background: black;
+    color: white;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav li{
+    list-style: none;
+    cursor: pointer;
+}
+nav #logo{
+    width: min(5vw,5vh);
+    height: min(5vw,5vh);
+    align-items: center;
+    margin:1vh 1vw 1vh 4vw;
+    cursor: pointer;
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+nav #Bookie{
+    font-size: large;
+    cursor: pointer;
+}
+nav #Bookie:hover{
+    /* transform: scale(1.2); */
+    font-size: xx-large;
+}
+nav #left_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav #right_box{
+    /* background: red; */
+    width: 70%;
+    display: flex;
+    font-size: large;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes rotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}

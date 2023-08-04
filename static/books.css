@@ -1,0 +1,87 @@
+:root{
+    --card-height:40vmin;
+    --card-width:30vmin;
+    --img-height:25vmin;
+    --img-width:30vmin;
+}
+body{
+    background-image: linear-gradient(270deg, rgb(0, 183, 255), rgb(255, 48, 255));
+}
+h1{
+    text-align: center;
+}
+#library{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card h1{
+    font-size: 13px;
+    font-weight: bold;
+
+}
+.card #author{
+    letter-spacing: 4px;
+}
+
+
+.card{
+    height: var(--card-height);    
+    width: var(--card-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    font-size: 10px;
+    cursor: pointer;
+}
+.card p{
+    padding: 0;
+    line-height: 10px;
+}
+.card *{
+    z-index: 2;
+}
+.card #year{
+    letter-spacing: 10px;
+    font-style: italic;
+}
+img {
+    overflow: hidden;
+    height: var(--img-height);
+    width: var(--img-width);
+    padding: 5px;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    width: 10vmin;
+    background-image: linear-gradient(270deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+.card::after {
+    content: '';
+    position: absolute;
+    background: black;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+
+/* 
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+} */
